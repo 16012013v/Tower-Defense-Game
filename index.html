@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tower Defense: Pro Edition</title>
     <style>
+        /* Підключаємо геймерський шрифт з Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
         /* Загальні налаштування */
         body {
             margin: 0;
@@ -13,42 +16,60 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: radial-gradient(circle, #1a1a2e 0%, #0f0f1b 100%);
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e; /* Дуже темний синій */
+            background: radial-gradient(circle, #2a2a4e 0%, #1a1a2e 100%);
+            font-family: 'Orbitron', sans-serif; /* Наш геймерський шрифт */
             color: white;
             overflow: hidden;
+        }
+
+        /* Ефект затемнення на фон */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
 
         /* Картка контенту */
         .container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.05); /* Напівпрозорий фон */
             padding: 60px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            backdrop-filter: blur(10px); /* Ефект розмиття */
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Трохи підсвітимо картку */
+        .container:hover {
+            box-shadow: 0 0 30px rgba(0, 200, 83, 0.2);
+            border-color: rgba(0, 200, 83, 0.3);
         }
 
         /* Заголовок */
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 5px;
-            background: linear-gradient(to right, #00c853, #b2ff59);
+            background: linear-gradient(to right, #00c853, #b2ff59); /* Неоновий зелений градієнт */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 10px 20px rgba(0, 200, 83, 0.3);
+            text-shadow: 0 0 15px rgba(0, 200, 83, 0.5); /* Ефект неонового сяйва */
         }
 
         p {
-            font-size: 1.2rem;
-            color: #8a8a8a;
+            font-size: 1.1rem;
+            color: #ccc;
             margin-bottom: 40px;
+            letter-spacing: 1px;
         }
 
-        /* Крута кнопка */
+        /* Крута неонова кнопка */
         .download-btn {
             position: relative;
             display: inline-block;
@@ -57,25 +78,29 @@
             font-weight: bold;
             color: white;
             text-decoration: none;
-            background: #00c853;
+            background: transparent;
+            border: 2px solid #00c853; /* Зелений бордер */
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 200, 83, 0.4);
+            box-shadow: 0 0 20px rgba(0, 200, 83, 0.3); /* Початкове сяйво */
         }
 
+        /* Ефекти наведення на кнопку */
         .download-btn:hover {
-            background: #00e676;
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 0 40px rgba(0, 230, 118, 0.6);
+            color: #1a1a2e; /* Колір тексту стає кольором фону */
+            background: #00c853; /* Зелений фон */
+            transform: translateY(-5px) scale(1.05); /* Кнопка піднімається і збільшується */
+            box-shadow: 0 0 40px rgba(0, 230, 118, 0.7); /* Сяйво стає сильнішим */
         }
 
-        /* Декор */
+        /* Декор під кнопкою */
         .version {
             margin-top: 20px;
             display: block;
             font-size: 0.8rem;
             color: #444;
         }
+
     </style>
 </head>
 <body>
