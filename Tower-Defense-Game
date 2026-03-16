@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завантажити Tower Defense</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
+        .card { background: #1e1e1e; padding: 40px; border-radius: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .btn { background: #00c853; color: white; padding: 20px 40px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 20px; display: inline-block; transition: 0.3s; }
+        .btn:hover { background: #00e676; transform: scale(1.05); }
+        h1 { color: #00c853; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Tower Defense: Pro Edition</h1>
+        <p>Натисніть кнопку нижче, щоб завантажити гру з Google Диска</p>
+        <br>
+        <a href="https://drive.google.com/file/d/1IHmiNjUE1mQBVkTyJvcn1zd34LHRKEmW/view?usp=sharing" class="btn">СКАЧАТИ ГРУ (.EXE)</a>
+    </div>
+</body>
+</html>
